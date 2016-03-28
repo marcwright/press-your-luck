@@ -1,3 +1,7 @@
+body {
+  font-size: 10px;
+}
+
 #board {
   width: 320px;
   height: 260px
