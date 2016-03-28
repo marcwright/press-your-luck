@@ -1,54 +1,63 @@
 body {
-  font-size: 10px;
+  font-size: 20px;
+  font-family: Georgia;
 }
 
 #board {
-  width: 320px;
-  height: 260px
+  width: 38em;
+  height: 32em
 }
 
 #startStopDiv {
-  padding-top: 25px;
+  padding-top: 2.5em;
 }
 
 .celRow {
-  width: 50px;
-  height: 50px;
+  width: 5em;
+  height: 5em;
   float: left;
   background-color: gray;
-  border: black 1px solid;
+  /*border: black .2em solid;*/
 }
 
 .celMiddle {
   float:left; 
-  height:154px; 
-  width: 206px;
-  border: black 1px solid;
+  width: 24.1em;
+  height:17em; 
+  /*border: black .2em solid;*/
   background-image: url("https://upload.wikimedia.org/wikipedia/en/c/cd/Press_Your_Luck.png");
-  background-size: 206px 154px;
+  background-size: 24.1em 17em;
   background-repeat: no-repeat;
+  border-radius: 2em;
+  overflow: hidden;
+
 }
 
 .celStack {
-  width: 50px;
-  height: 50px;
+  width: 5em;
+  height: 5em;
   background-color: gray;
-  border: black 1px solid;
 }
 
 .cel {
 /*   background-image: url('http://orig07.deviantart.net/7cf0/f/2013/071/2/f/press_by_designerboy7-d5xuww5.png'); */
-  background-size: 50px 50px;
+  background-size: 5em 5em;
   background-repeat: no-repeat;
+  border-radius: 1em;
+  border: .1em solid;
+  margin: .5em;
+  text-align: center;
+  box-sizing: border-box;
+
 }
 
 .sprite {
-  width: 465px;
-  height: 470px;
+  width: 46.5em;
+  height: 47em;
   background-image: url('http://orig07.deviantart.net/7cf0/f/2013/071/2/f/press_by_designerboy7-d5xuww5.png');
 /*   background-position: -2318px -465px; */
 }
 
-.black {
-  border: red 2px dotted;
+.red {
+  border: red .5em dotted;
 }

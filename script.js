@@ -12,18 +12,23 @@ var colorArray = [
 // "red", "green", "blue", "orange", "yellow"];
 
 
+
 var index = Math.random()
 console.log(colorArray[Math.floor(Math.random()*colorArray.length)]);
 
 function blink(){
+  $('.cel').removeClass('red');
   var $rows = $('.cel');
   var chosenCel = $rows[Math.floor(Math.random()*$rows.length)];
   console.log($(chosenCel));
-  $(chosenCel).addClass('black');
+
+  $(chosenCel).addClass('red');
   
- $('.cel').each(function(){
-    // console.log($(this));
-     $(this).css("background-color", colorArray[Math.floor(Math.random()*colorArray.length)].color);
+  $('.cel').each(function(){
+    var arraySelection = colorArray[Math.floor(Math.random()*colorArray.length)];
+     $(this).css("background-color", arraySelection.color)
+            .html("<p style='margin-top:2em;font-size:0.8em'>" + arraySelection.text + "</p>")
+
    });
 };
 
