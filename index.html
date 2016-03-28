@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Press Your Luck</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script type="text/javascript" src="./jquery_2_2_2.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
+</head>
+  <body>
+    <div id="board">
+      <div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+      </div>
+
+      <div style="clear:both"></div>
+
+      <div>
+        <div style="float:left">
+          <div class="cel celStack"></div>
+          <div class="cel celStack"></div>
+          <div class="cel celStack"></div>
+        </div>
+
+        <div class="celMiddle"></div>
+
+        <div style="float:left">
+          <div class="cel celStack"></div>
+          <div class="cel celStack"></div>
+          <div class="cel celStack"></div>
+        </div>
+      </div>
+
+      <div style="clear:both"></div>
+
+      <div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+         <div class="cel celRow"></div>
+      </div>
+      <!-- <div class="sprite"></div> -->
+  </div>
+
+    <div id="startStopDiv">
+      <input type="button" onclick="clearInterval(add)" value="stop"/>
+      <input type="button" onclick="start()" value="start"/>
+    </div>
+
+  </body>
+</html>
