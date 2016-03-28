@@ -1,6 +1,12 @@
 body {
   font-size: 20px;
   font-family: Georgia;
+  background-color: rgb(51, 51, 51)
+}
+
+input[type="button"] {
+    width: 10em;
+    margin-left: 0 auto;
 }
 
 #board {
@@ -8,8 +14,19 @@ body {
   height: 32em
 }
 
+#score {
+  color: red;
+  width: 10em;
+  height: 3em;
+  text-align: center;
+  margin-left: 15em;
+}
+
 #startStopDiv {
-  padding-top: 2.5em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  text-align: center;
+  width: 38em;
 }
 
 .celRow {
@@ -58,6 +75,6 @@ body {
 /*   background-position: -2318px -465px; */
 }
 
-.red {
-  border: red .5em dotted;
+.gold {
+  border: Gold .5em dotted;
 }
