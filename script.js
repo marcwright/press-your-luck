@@ -1,15 +1,15 @@
 var colorArray = [
-  {color: "BlanchedAlmond", value: 1000, text: "1000", free_spin: 0},
-  {color: "LightCoral", value: 750, text: "750 + FREE SPIN", free_spin: 1},
-  {color: "LightGreen", value: 500, text: "500", free_spin: 0},
-  {color: "PowderBlue", value: 1500, text: "1500", free_spin: 0 },
-  {color: "YellowGreen", value: 2000, text: "2000", free_spin: 0},
-  {color: "DarkOrange", value: -1, text: "WHAMMY", free_spin: 0},
-  {color: "Aqua", value: 0, text: "CRUISE", free_spin: 0},
-  {color: "blue", value: 750, text: "750 + FREE SPIN", free_spin: 1},
-  {color: "green", value: 500, text: "500", free_spin: 0},
-  {color: "yellow", value: 1500, text: "1500", free_spin: 0 },
-  {color: "pink", value: 2000, text: "2000", free_spin: 0},
+  {color: "BlanchedAlmond", value: 1000, text: "1000 + spin", free_spin: 1, img: "1000spin.png"},
+  {color: "LightCoral", value: 2250, text: "750 + FREE SPIN", free_spin: 1, img: "2250.png"},
+  {color: "LightGreen", value: 500, text: "500", free_spin: 1, img: "500spin.png"},
+  {color: "PowderBlue", value: 1500, text: "1500", free_spin: 0, img: "1500.png"},
+  {color: "YellowGreen", value: 4000, text: "2000", free_spin: 1, img: "4000spin.png"},
+  {color: "Orange", value: -1, text: "WHAMMY", free_spin: 0, img: "whammy1.gif"},
+  {color: "Aqua", value: 4000, text: "CRUISE", free_spin: 1, img: "4000spin.png"},
+  {color: "blue", value: 4000, text: "750 + FREE SPIN", free_spin: 1, img: "4000spin.png"},
+  {color: "green", value: 2250, text: "500", free_spin: 0, img: "2250.png"},
+  {color: "yellow", value: 1500, text: "4000", free_spin: 1, img: "1500.png"},
+  {color: "pink", value: 2250, text: "2250", free_spin: 0, img: "2250.png"},
 ];
 
 var score = 0;
@@ -21,12 +21,23 @@ var chosenCel;
 console.log(colorArray[Math.floor(Math.random()*colorArray.length)]);
 
 function blink(){
-  $('.cel').removeClass('red');
+  $('.cel').removeClass('flash').removeAttr("style").html("");
 
   $('.cel').each(function(){
     arraySelection = colorArray[Math.floor(Math.random()*colorArray.length)];
-     $(this).css("background-color", arraySelection.color)
-            .html("<p style='margin-top:2em;font-size:0.8em'>" + arraySelection.text + "</p>")
+  
+
+      if (arraySelection.value == -1) {
+        $(this).css("background-image", "url(img/" + arraySelection.img + ")")
+               .attr('value', arraySelection.value);
+      } else {
+        $(this).css("background-image", "url(img/" + arraySelection.img + ")")
+               .attr('value', arraySelection.value);
+        
+
+        // $(this).css("background-color", arraySelection.color)
+        //       .html("<p style='margin-top:2em;font-size:0.8em'>" + arraySelection.text + "</p>")
+      }
    });
 
   $rows = $('.cel');
@@ -34,7 +45,7 @@ function blink(){
   chosenCel = $rows[Math.floor(Math.random()*$rows.length)];
   console.log($(chosenCel));
 
-  $(chosenCel).addClass('red');
+  $(chosenCel).addClass('flash');
   
 };
 
@@ -42,22 +53,45 @@ function blink(){
 var input = document.getElementById("input");
 
 function start() {
+  $(chosenCel).removeClass('flash');
+  clearTimeout(flash);
   add = setInterval(blink,500);
 }
 
 function stop(){
   clearInterval(add);
+  flash(chosenCel, 15, 100);
 
   if (chosenCel.textContent === "WHAMMY"){
     score = 0;
     spins -= 1;
   } else {
-    score += parseInt(chosenCel.textContent);
+    score += parseInt(arraySelection.value);
   }
   
 
   console.log("score: " + score + "  object text: " + chosenCel.textContent + "  spin: " + chosenCel.free_spin);
   $('#score').text("$ " + score);
+}
+
+function flash(elem, times, speed) {
+    if (times > 0 || times < 0) {
+        if ($(elem).hasClass("flash")) 
+            $(elem).removeClass("flash");
+        else
+            $(elem).addClass("flash");
+    }
+
+    clearTimeout(function () {
+        flash(elem, times, speed);
+    });
+
+    if (times > 0 || times < 0) {
+        setTimeout(function () {
+            flash(elem, times, speed);
+        }, speed);
+        times -= .5;
+    }
 }
 
 // start();

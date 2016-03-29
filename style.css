@@ -30,6 +30,13 @@ input[type="button"] {
   width: 38em;
 }
 
+.flash {
+    color: #FFF !important;
+    background: #FC79CE;
+    !important;
+    border: 0.5em
+}
+
 .celRow {
   width: 5em;
   height: 5em;
@@ -59,13 +66,14 @@ input[type="button"] {
 
 .cel {
 /*   background-image: url('http://orig07.deviantart.net/7cf0/f/2013/071/2/f/press_by_designerboy7-d5xuww5.png'); */
-  background-size: 5em 5em;
+  background-size: 4.8em 4.8em;
   background-repeat: no-repeat;
   border-radius: 1em;
-  border: .1em solid;
+  border: .2em solid;
   margin: .5em;
   text-align: center;
   box-sizing: border-box;
+  /*padding: 0.6em*/
 
 }
 
@@ -77,6 +85,5 @@ input[type="button"] {
 }
 
 .red {
-  border: red .5em dotted;
-}
+  margin: red .5em dotted;
 }
