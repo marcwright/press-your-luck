@@ -1,31 +1,40 @@
 var colorArray = [
-  {color: "BlanchedAlmond", value: 1000, text: "$1000", free_spin: 0},
-  {color: "LightCoral", value: 750, text: "$750 + FREE SPIN", free_spin: 1},
-  {color: "LightGreen", value: 500, text: "$500", free_spin: 0},
-  {color: "PowderBlue", value: 1500, text: "$1500", free_spin: 0 },
-  {color: "YellowGreen", value: 2000, text: "$2000", free_spin: 0},
-  {color: "DarkOrange", value: 0, text: "WHAMMY", free_spin: 0},
-  {color: "Aqua", value: 0, text: "CRUISE", free_spin: 0}
+  {color: "BlanchedAlmond", value: 1000, text: "1000", free_spin: 0},
+  {color: "LightCoral", value: 750, text: "750 + FREE SPIN", free_spin: 1},
+  {color: "LightGreen", value: 500, text: "500", free_spin: 0},
+  {color: "PowderBlue", value: 1500, text: "1500", free_spin: 0 },
+  {color: "YellowGreen", value: 2000, text: "2000", free_spin: 0},
+  {color: "DarkOrange", value: -1, text: "WHAMMY", free_spin: 0},
+  {color: "Aqua", value: 0, text: "CRUISE", free_spin: 0},
+  {color: "LightCoral", value: 750, text: "750 + FREE SPIN", free_spin: 1},
+  {color: "LightGreen", value: 500, text: "500", free_spin: 0},
+  {color: "PowderBlue", value: 1500, text: "1500", free_spin: 0 },
+  {color: "YellowGreen", value: 2000, text: "2000", free_spin: 0},
 ];
 
 var score = 0;
 var arraySelection;
-var index = Math.random()
+var $rows = [];
+var chosenCel;
+// var index = Math.random()
 console.log(colorArray[Math.floor(Math.random()*colorArray.length)]);
 
 function blink(){
   $('.cel').removeClass('gold');
-  var $rows = $('.cel');
-  var chosenCel = $rows[Math.floor(Math.random()*$rows.length)];
-  console.log($(chosenCel));
 
-  $(chosenCel).addClass('gold');
-  
   $('.cel').each(function(){
     arraySelection = colorArray[Math.floor(Math.random()*colorArray.length)];
      $(this).css("background-color", arraySelection.color)
             .html("<p style='margin-top:2em;font-size:0.8em'>" + arraySelection.text + "</p>")
    });
+
+  $rows = $('.cel');
+
+  chosenCel = $rows[Math.floor(Math.random()*$rows.length)];
+  console.log($(chosenCel));
+
+  $(chosenCel).addClass('gold');
+  
 };
 
 //buttons
@@ -37,9 +46,16 @@ function start() {
 
 function stop(){
   clearInterval(add);
-  score += arraySelection.value;
-  console.log("score is " + score);
-  $('#score').text(score);
+
+  if (chosenCel.textContent === "WHAMMY"){
+    score = 0;
+  } else {
+    score += parseInt(chosenCel.textContent);
+  }
+  
+
+  console.log("score: " + score + "object text: " + chosenCel.textContent);
+  $('#score').text("$ " + score);
 }
 
 // start();
