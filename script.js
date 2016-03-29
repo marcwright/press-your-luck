@@ -6,13 +6,14 @@ var colorArray = [
   {color: "YellowGreen", value: 2000, text: "2000", free_spin: 0},
   {color: "DarkOrange", value: -1, text: "WHAMMY", free_spin: 0},
   {color: "Aqua", value: 0, text: "CRUISE", free_spin: 0},
-  {color: "LightCoral", value: 750, text: "750 + FREE SPIN", free_spin: 1},
-  {color: "LightGreen", value: 500, text: "500", free_spin: 0},
-  {color: "PowderBlue", value: 1500, text: "1500", free_spin: 0 },
-  {color: "YellowGreen", value: 2000, text: "2000", free_spin: 0},
+  {color: "blue", value: 750, text: "750 + FREE SPIN", free_spin: 1},
+  {color: "green", value: 500, text: "500", free_spin: 0},
+  {color: "yellow", value: 1500, text: "1500", free_spin: 0 },
+  {color: "pink", value: 2000, text: "2000", free_spin: 0},
 ];
 
 var score = 0;
+var spins = 2;
 var arraySelection;
 var $rows = [];
 var chosenCel;
@@ -20,7 +21,7 @@ var chosenCel;
 console.log(colorArray[Math.floor(Math.random()*colorArray.length)]);
 
 function blink(){
-  $('.cel').removeClass('gold');
+  $('.cel').removeClass('red');
 
   $('.cel').each(function(){
     arraySelection = colorArray[Math.floor(Math.random()*colorArray.length)];
@@ -33,7 +34,7 @@ function blink(){
   chosenCel = $rows[Math.floor(Math.random()*$rows.length)];
   console.log($(chosenCel));
 
-  $(chosenCel).addClass('gold');
+  $(chosenCel).addClass('red');
   
 };
 
@@ -49,12 +50,13 @@ function stop(){
 
   if (chosenCel.textContent === "WHAMMY"){
     score = 0;
+    spins -= 1;
   } else {
     score += parseInt(chosenCel.textContent);
   }
   
 
-  console.log("score: " + score + "object text: " + chosenCel.textContent);
+  console.log("score: " + score + "  object text: " + chosenCel.textContent + "  spin: " + chosenCel.free_spin);
   $('#score').text("$ " + score);
 }
 

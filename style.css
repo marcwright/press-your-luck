@@ -76,6 +76,7 @@ input[type="button"] {
 /*   background-position: -2318px -465px; */
 }
 
-.gold {
-  border: Gold .5em dotted;
+.red {
+  border: red .5em dotted;
+}
 }
