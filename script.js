@@ -62,11 +62,11 @@ function stop(){
   clearInterval(add);
   flash(chosenCel, 15, 100);
 
-  if (chosenCel.textContent === "WHAMMY"){
+  if (chosenCel.attributes.value.value == -1){
     score = 0;
     spins -= 1;
   } else {
-    score += parseInt(arraySelection.value);
+    score += parseInt(chosenCel.attributes.value.value);
   }
   
 
