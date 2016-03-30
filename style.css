@@ -2,7 +2,8 @@ body {
   font-size: 20px;
   font-family: Georgia;
   /*background-color: rgb(51, 51, 51)*/
-  background-color: black
+  background-color: black;
+  margin-left: 0 auto;
 }
 
 input[type="button"] {
@@ -13,7 +14,8 @@ input[type="button"] {
 
 #board {
   width: 38em;
-  height: 32em
+  height: 32em;
+  margin: auto;
 }
 
 #score {
@@ -21,14 +23,16 @@ input[type="button"] {
   width: 10em;
   height: 3em;
   text-align: center;
-  margin-left: 15em;
+  margin: auto;
+  font-size: 3em;
 }
 
 #startStopDiv {
   padding-top: 0.5em;
   padding-bottom: 1em;
   text-align: center;
-  width: 38em;
+  /*width: 38em;*/
+  margin: auto;
 }
 
 .flash {
@@ -48,11 +52,11 @@ input[type="button"] {
 
 .celMiddle {
   float:left; 
-  width: 24.1em;
-  height:17em; 
+  width: 20em;
+  height:15em; 
   /*border: black .2em solid;*/
   background-image: url("https://upload.wikimedia.org/wikipedia/en/c/cd/Press_Your_Luck.png");
-  background-size: 24.1em 17em;
+  background-size: 20em 15em;
   background-repeat: no-repeat;
   border-radius: 2em;
   overflow: hidden;
@@ -71,7 +75,7 @@ input[type="button"] {
   background-repeat: no-repeat;
   border-radius: 1em;
   border: .2em solid;
-  margin: .5em;
+  /*margin: .5em;*/
   text-align: center;
   box-sizing: border-box;
   /*padding: 0.6em*/
@@ -87,4 +91,33 @@ input[type="button"] {
 
 .red {
   margin: red .5em dotted;
+}
+
+.btn {
+  background: #d93434;
+  background-image: -webkit-linear-gradient(top, #d93434, #b82b2b);
+  background-image: -moz-linear-gradient(top, #d93434, #b82b2b);
+  background-image: -ms-linear-gradient(top, #d93434, #b82b2b);
+  background-image: -o-linear-gradient(top, #d93434, #b82b2b);
+  background-image: linear-gradient(to bottom, #d93434, #b82b2b);
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 1em;
+  padding: 0.7em 0.5em 2em 0.5em;
+  text-decoration: none;
+  width: 6em;
+  height: 3em
+}
+
+.btn:hover {
+  /*background: #537d15;*/
+  background-image: -webkit-linear-gradient(top, #537d15, #34d944);
+  background-image: -moz-linear-gradient(top, #537d15, #34d944);
+  background-image: -ms-linear-gradient(top, #537d15, #34d944);
+  background-image: -o-linear-gradient(top, #537d15, #34d944);
+  background-image: linear-gradient(to bottom, #537d15, #34d944);
+  text-decoration: none;
 }

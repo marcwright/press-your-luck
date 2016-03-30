@@ -52,13 +52,15 @@ function blink(){
 //buttons
 var input = document.getElementById("input");
 
-function start() {
+function start(event) {
+  event.stopPropagation();
   $(chosenCel).removeClass('flash');
   clearTimeout(flash);
   add = setInterval(blink,500);
 }
 
-function stop(){
+function stop(event){
+  event.stopPropagation();
   clearInterval(add);
   flash(chosenCel, 15, 100);
 
