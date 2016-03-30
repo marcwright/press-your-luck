@@ -1,15 +1,23 @@
 var colorArray = [
-  {color: "BlanchedAlmond", value: 1000, text: "1000 + spin", free_spin: 1, img: "1000spin.png"},
-  {color: "LightCoral", value: 2250, text: "750 + FREE SPIN", free_spin: 1, img: "2250.png"},
-  {color: "LightGreen", value: 500, text: "500", free_spin: 1, img: "500spin.png"},
-  {color: "PowderBlue", value: 1500, text: "1500", free_spin: 0, img: "1500.png"},
-  {color: "YellowGreen", value: 4000, text: "2000", free_spin: 1, img: "4000spin.png"},
-  {color: "Orange", value: -1, text: "WHAMMY", free_spin: 0, img: "whammy1.gif"},
-  {color: "Aqua", value: 4000, text: "CRUISE", free_spin: 1, img: "4000spin.png"},
-  {color: "blue", value: 4000, text: "750 + FREE SPIN", free_spin: 1, img: "4000spin.png"},
-  {color: "green", value: 2250, text: "500", free_spin: 0, img: "2250.png"},
-  {color: "yellow", value: 1500, text: "4000", free_spin: 1, img: "1500.png"},
-  {color: "pink", value: 2250, text: "2250", free_spin: 0, img: "2250.png"},
+  {value: 470,   text: "470",    free_spin: 0, img: "luck_board.png", pos: "-2px -18px"},
+  {value: 750,   text: "750",    free_spin: 0, img: "luck_board.png", pos: "-2px -132px"},
+  {value: 1200,  text: "1200",   free_spin: 0, img: "luck_board.png", pos: "-2px -252px"},
+  {value: 1750,  text: "1750",   free_spin: 0, img: "luck_board.png", pos: "-2px -372px"},
+  {value: 2500,  text: "2500",   free_spin: 1, img: "luck_board.png", pos: "-2px -492px"},
+  {value: -1,    text: "WHAMMY", free_spin: 0, img: "whammy1.gif"},
+  {value: 2750,  text: "2750",   free_spin: 0, img: "luck_board.png", pos: "-101px -492px"},
+  {value: 3000,  text: "3000",   free_spin: 0, img: "luck_board.png", pos: "-198px -492px"},
+  {value: 3500,  text: "3500",    free_spin: 0, img: "luck_board.png", pos: "-395px -492px"},
+  {value: 4000,  text: "4000",   free_spin: 1, img: "luck_board.png", pos: "-589px -492px"},
+  {value: 2000,  text: "2000",   free_spin: 1, img: "luck_board.png", pos: "-394px -374px"},
+  {value: 1500,  text: "1500",   free_spin: 1, img: "luck_board.png", pos: "-492px -251px"},
+  {value: 1000,  text: "1000",   free_spin: 1, img: "luck_board.png", pos: "-492px -136px"},
+  {value: 1000,  text: "1000",   free_spin: 0, img: "luck_board.png", pos: "-394px -136px"}
+
+  // background-position: -2318px -465px;
+//   background-position: -36px -35px; 
+// width: 398px;
+// height: 409px;
 ];
 
 var score = 0;
@@ -32,6 +40,8 @@ function blink(){
                .attr('value', arraySelection.value);
       } else {
         $(this).css("background-image", "url(img/" + arraySelection.img + ")")
+               .css('background-position', arraySelection.pos)
+               .css('background-size', "685px 600px")
                .attr('value', arraySelection.value);
         
 
