@@ -38,18 +38,17 @@ input[type="button"] {
   float: left;
 }
 
-#spins {
-  color:red;
+#spins p {
+  color:yellow;
+  font-size: 1em;
   float:left;
+  margin: 1em 0em 2em 0.5em;
 }
 
 #score {
   color: red;
-  /*width: 5em;
-  height: 3em;*/
   text-align: center;
-  margin: 0;
-  font-size: 3em;
+  font-size: 2em;
   float:right;
 }
 
