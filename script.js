@@ -1,7 +1,7 @@
 var colorArray = [
-  {value: 470,   text: "470",    free_spin: 0, img: "luck_board_low_res.jpg", pos: "-13px -18px"},
+  {value: 470,   text: "470",    free_spin: 0, img: "luck_board_low_res.jpg", pos: "-13px -13px"},
   {value: 750,   text: "750",    free_spin: 0, img: "luck_board_low_res.jpg", pos: "-13px -132px"},
-  {value: 1000,  text: "1000",   free_spin: 1, img: "luck_board_low_res.jpg", pos: "-582px -136px"},
+  {value: 1000,  text: "1000",   free_spin: 1, img: "luck_board_low_res.jpg", pos: "-582px -134px"},
   {value: 1000,  text: "1000",   free_spin: 0, img: "luck_board_low_res.jpg", pos: "-469px -136px"},
   {value: 1200,  text: "1200",   free_spin: 0, img: "luck_board_low_res.jpg", pos: "-13px -252px"},
   {value: 1500,  text: "1500",   free_spin: 1, img: "luck_board_low_res.jpg", pos: "-468px -251px"},
@@ -69,11 +69,12 @@ function start(event) {
 function stop(event){
   event.stopPropagation();
   clearInterval(add);
-  flash(chosenCel, 15, 100);
+  flash(chosenCel, 10, 100);
 
   if (chosenCel.attributes.value.value == -1){
     score = 0;
     spins -= 1;
+    $('#whammyDiv1').css('background-image', "url(img/whammy2.png)")
   } else {
     score += parseInt(chosenCel.attributes.value.value);
   }

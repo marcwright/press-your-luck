@@ -12,27 +12,57 @@ input[type="button"] {
     margin-left: 0 auto;
 }
 
-#board {
+#board, #footer {
   width: 30em;
   height: 26em;
   margin: auto;
 }
 
+.whammyPic{
+  margin-left: 2px;
+  background-image: url('./img/whammy2bw.png');
+  background-size: 3em 3em;
+  width: 3em;
+  height: 3em;
+  float: left;
+}
+
+#footer {
+
+}
+
+#whammysContainerDiv {
+  /*width: 15em;
+  height: 3em;*/
+  box-sizing: border-box;
+  float: left;
+}
+
+#spins {
+  color:red;
+  float:left;
+}
+
 #score {
   color: red;
-  width: 10em;
-  height: 3em;
+  /*width: 5em;
+  height: 3em;*/
   text-align: center;
-  margin: auto;
+  margin: 0;
   font-size: 3em;
+  float:right;
 }
 
 #startStopDiv {
-  padding-top: 0.5em;
+  /*padding-top: 0.5em;*/
   padding-bottom: 1em;
   text-align: center;
+  float:left;
+  margin-left: 1.5em;
+
   /*width: 38em;*/
-  margin: auto;
+  /*margin-left: 1em;*/
+  /*float: right;*/
 }
 
 .flash {
@@ -108,8 +138,8 @@ input[type="button"] {
   font-size: 1em;
   padding: 0.7em 0.5em 2em 0.5em;
   text-decoration: none;
-  width: 6em;
-  height: 3em
+  width: 4em;
+  height: 2em
 }
 
 .btn:hover {
