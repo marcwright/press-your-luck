@@ -37,7 +37,7 @@ input[type="button"] {
   height:15em; 
   color: red;
   /*border: black .2em solid;*/
-  background-image: url("https://upload.wikimedia.org/wikipedia/en/c/cd/Press_Your_Luck.png");
+  background-image: url("./img/logo.png");
   background-size: 20em 15em;
   background-repeat: no-repeat;
   border-radius: 2em;
