@@ -31,6 +31,19 @@ input[type="button"] {
 
 }
 
+#celMiddle {
+  float:left; 
+  width: 20em;
+  height:15em; 
+  color: red;
+  /*border: black .2em solid;*/
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/c/cd/Press_Your_Luck.png");
+  background-size: 20em 15em;
+  background-repeat: no-repeat;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
 #whammysContainerDiv {
   /*width: 15em;
   height: 3em;*/
@@ -79,18 +92,6 @@ input[type="button"] {
   /*border: black .2em solid;*/
 }
 
-.celMiddle {
-  float:left; 
-  width: 20em;
-  height:15em; 
-  /*border: black .2em solid;*/
-  background-image: url("https://upload.wikimedia.org/wikipedia/en/c/cd/Press_Your_Luck.png");
-  background-size: 20em 15em;
-  background-repeat: no-repeat;
-  border-radius: 2em;
-  overflow: hidden;
-
-}
 
 .celStack {
   width: 5em;
