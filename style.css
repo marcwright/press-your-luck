@@ -21,9 +21,9 @@ input[type="button"] {
 .whammyPic{
   margin-left: 2px;
   background-image: url('./img/whammy2bw.png');
-  background-size: 3em 3em;
-  width: 3em;
-  height: 3em;
+  background-size: 4em 4em;
+  width: 4em;
+  height: 4em;
   float: left;
 }
 
@@ -70,7 +70,7 @@ input[type="button"] {
   padding-bottom: 1em;
   text-align: center;
   float:left;
-  margin-left: 1.5em;
+  margin-left: 1em;
 
   /*width: 38em;*/
   /*margin-left: 1em;*/
@@ -132,14 +132,14 @@ input[type="button"] {
   background-image: linear-gradient(to bottom, #d93434, #b82b2b);
   -webkit-border-radius: 1em;
   -moz-border-radius: 1em;
-  border-radius: 1em;
-  font-family: Georgia;
+  border-radius: 2em;
+  font-family: Arial;
   color: #ffffff;
   font-size: 1em;
-  padding: 0.7em 0.5em 2em 0.5em;
+  /*padding: 1em 0.5em 2em 0.5em;*/
   text-decoration: none;
   width: 4em;
-  height: 2em
+  height: 4em
 }
 
 .btn:hover {
