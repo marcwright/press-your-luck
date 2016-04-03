@@ -27,9 +27,6 @@ input[type="button"] {
   float: left;
 }
 
-#footer {
-
-}
 
 #celMiddle {
   float:left; 
@@ -51,17 +48,25 @@ input[type="button"] {
   float: left;
 }
 
+#spins{
+  margin-top: -0.5em;
+}
 #spins p {
   color:yellow;
   font-size: 1em;
-  float:left;
-  margin: 1em 0em 2em 0.5em;
+  /*display: inline-block;*/
+  float:right;
+  /*margin: em 0em 2em 1em;*/
 }
 
 #score {
   color: red;
   text-align: center;
   font-size: 2em;
+  margin-top: -0.2em;
+}
+
+#spinScore {
   float:right;
 }
 
@@ -142,7 +147,7 @@ input[type="button"] {
   height: 4em
 }
 
-.btn:hover {
+/*.btn:hover {
   /*background: #537d15;*/
   background-image: -webkit-linear-gradient(top, #537d15, #34d944);
   background-image: -moz-linear-gradient(top, #537d15, #34d944);
@@ -150,4 +155,4 @@ input[type="button"] {
   background-image: -o-linear-gradient(top, #537d15, #34d944);
   background-image: linear-gradient(to bottom, #537d15, #34d944);
   text-decoration: none;
-}
+}*/
