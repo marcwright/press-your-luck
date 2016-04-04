@@ -145,10 +145,10 @@ $(function(){
 
   $('#target').on('click',function(){
     if($(this).attr('data-click-state') == 1) {
-      $(this).attr('data-click-state', 0);
+      $(this).attr('data-click-state', 0)
       stop(event);
     } else {
-      $(this).attr('data-click-state', 1);
+      $(this).attr('data-click-state', 1)
       start(event);
     }    
   });
