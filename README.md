@@ -9,3 +9,5 @@ Bugs I need to fix:
 - I want the spins counter to update as soon as the board stops not after it's restarted.
 - Better randomization of whammy distribution (perhaps add difficultly level selection that will increase speed also)
 - Keep track of the high score
+- Add sound effects
+- Add a whammy animation from the original game
